@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="472.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gestion.projet.GestionPatientController">
+    <center>
+        <SplitPane prefHeight="375.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #ffffff;">
+                    <children>
+                        <HBox layoutX="320.0" layoutY="14.0" prefHeight="44.0" prefWidth="222.0">
+                            <children>
+                                <TextField fx:id="searchNom" prefHeight="26.0" prefWidth="187.0" />
+                                <Button fx:id="buttonSearch" mnemonicParsing="false" prefHeight="18.0" prefWidth="58.0">
+                                    <graphic>
+                                        <ImageView fitHeight="19.0" fitWidth="31.0">
+                                            <Image url="@images/re.jpeg" />
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                            </children>
+                        </HBox>
+                        <TableView fx:id="tablepatients" layoutX="272.0" layoutY="112.0" prefHeight="315.0" prefWidth="368.0">
+                            <columns>
+                                <TableColumn fx:id="colonnenom" prefWidth="94.0" text="Nom" />
+                                <TableColumn fx:id="colonneprenom" prefWidth="139.0" text="Prénom" />
+                                <TableColumn fx:id="colonnetel" prefWidth="133.5999755859375" text="Téléphone" />
+                            </columns>
+                        </TableView>
+                        <TextField fx:id="cin" layoutX="21.0" layoutY="151.0" prefHeight="31.0" prefWidth="88.0" promptText="Cin" style="-fx-background-color: transparent; -fx-border-color: #3294ba; -fx-border-width: 0px 0px 2px 0px;">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </TextField>
+                        <TextField fx:id="nomfamille" layoutX="21.0" layoutY="196.0" prefHeight="31.0" prefWidth="127.0" promptText="Nom de Famille" style="-fx-background-color: transparent; -fx-border-color: #3294ba; -fx-border-width: 0px 0px 2px 0px;">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </TextField>
+                        <TextField fx:id="prenom" layoutX="25.0" layoutY="235.0" prefHeight="31.0" prefWidth="148.0" promptText="Prénom" style="-fx-background-color: transparent; -fx-border-color: #3294ba; -fx-border-width: 0px 0px 2px 0px;">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </TextField>
+                        <TextField fx:id="tel" layoutX="22.0" layoutY="290.0" prefHeight="31.0" prefWidth="173.0" promptText="Téléphone" style="-fx-background-color: transparent; -fx-border-color: #3294ba; -fx-border-width: 0px 0px 2px 0px;">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </TextField>
+                        <RadioButton fx:id="masculin" layoutX="54.0" layoutY="358.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="M" />
+                        <RadioButton fx:id="feminin" layoutX="123.0" layoutY="358.0" mnemonicParsing="false" text="F" />
+
+                        <Button fx:id="buttonAdd" layoutX="13.0" layoutY="388.0" mnemonicParsing="false" onAction="#handleAdd" prefHeight="40.0" prefWidth="61.0" style="-fx-background-color: #ffffff;" textFill="#3294ba" />
+                        <Button fx:id="buttonDelete" layoutX="90.0" layoutY="389.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="63.0" style="-fx-background-color: #ffffff;" textFill="#000000" />
+                        <Button fx:id="buttonUpdate" layoutX="171.0" layoutY="379.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="62.0" style="-fx-background-color: #ffffff;" textFill="#000000" />
+                        <Button fx:id="buttonGeneratePDF" layoutX="591.0" layoutY="1.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="86.0" style="-fx-background-color: #3294ba;" text="Imprimer" textFill="WHITE" />
+                  <Label layoutX="145.0" layoutY="27.0" prefHeight="27.0" prefWidth="125.0" text="PATIENT" textFill="#3294ba">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="91.0" fitWidth="110.0" layoutX="8.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/p.jpeg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="23.0" fitWidth="33.0" layoutX="23.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/plu.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="56.0" layoutX="99.0" layoutY="392.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/poub.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="22.0" fitWidth="48.0" layoutX="180.0" layoutY="396.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/edit.png" />
+                     </image>
+                  </ImageView>
+
+
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </center>
+</BorderPane>
